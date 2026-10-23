@@ -1,5 +1,6 @@
 import { Fingerprint, Briefcase, Coffee, Skull, Award } from 'lucide-react';
 import { useReveal } from '@/lib/hooks';
+import MemoryBoard from './MemoryBoard';
 
 const SKILLS = [
   { name: 'TypeScript', level: 92 },
@@ -15,13 +16,6 @@ const FACTS = [
   { icon: Coffee, label: 'Cases Closed', value: '142' },
   { icon: Skull, label: 'Bugs Eliminated', value: '2,840' },
   { icon: Award, label: 'Commendations', value: '11' },
-];
-
-const TIMELINE = [
-  { year: '2018', event: 'Badge issued. First deployment — junior deputy at Pixel Precinct.' },
-  { year: '2020', event: 'Promoted to Senior Investigator. Led raid on legacy codebase, recovered 40k lines.' },
-  { year: '2022', event: 'Opened private practice. Freelance contracts for startups & agencies.' },
-  { year: '2024', event: 'Consulting detective. Specializing in performance & accessibility homicides.' },
 ];
 
 export default function About() {
@@ -40,8 +34,13 @@ export default function About() {
                 <span className="font-terminal text-sm uppercase tracking-widest opacity-70">I.D. No.</span>
                 <span className="font-terminal text-sm">1947-NOIR</span>
               </div>
-              <div className="aspect-[3/4] bg-paper border-2 border-paper/30 mb-4 relative overflow-hidden flex items-center justify-center">
-                <Fingerprint className="w-24 h-24 text-ink opacity-80" />
+              <div className="aspect-[3/4] bg-paper border-2 border-paper/30 mb-4 relative overflow-hidden">
+                <img
+                  src="/SaveClip.App_729736551_18319674070277876_2816671481717794243_n_(1).jpg"
+                  alt="Noah Holmes seated on a motorcycle"
+                  className="w-full h-full object-cover grayscale contrast-125 brightness-95"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-paper/10 pointer-events-none" />
                 <div className="absolute top-2 right-2 stamp text-[10px] px-2 py-1 bg-paper">
                   Confidential
                 </div>
@@ -114,27 +113,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* Timeline */}
-        <div className="mt-16">
-          <h3 className="font-typewriter text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
-            <span className="w-8 h-px bg-ink" /> Service Record
-          </h3>
-          <div className="relative pl-6 border-l-2 border-ink">
-            {TIMELINE.map((t, i) => (
-              <div
-                key={t.year}
-                className={`relative mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-                style={{ transitionDelay: `${400 + i * 150}ms` }}
-              >
-                <div className="absolute -left-[31px] top-1 w-5 h-5 bg-ink border-2 border-ink rotate-45" />
-                <div className="bg-paper border-2 border-ink p-4 shadow-hard-sm ml-2">
-                  <span className="font-typewriter text-xl">{t.year}</span>
-                  <p className="font-courier text-base mt-1 leading-relaxed">{t.event}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Memory Board */}
+        <MemoryBoard />
       </div>
     </section>
   );
