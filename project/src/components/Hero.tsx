@@ -5,13 +5,13 @@ import { useTypewriter } from '@/lib/hooks';
 const CASE_LINE = '> CASE #1947-NOIR // STATUS: OPEN';
 const ROLE_LINES = [
   'Frontend Developer',
-  'UI/UX Detective',
-  'Bug Hunter, Class A',
+  'UI/UX Plek Ketiplek',
+  'Bug Hunter Plenger',
 ];
 
 export default function Hero() {
   const { display: caseDisplay } = useTypewriter(CASE_LINE, 38, 200);
-  const { display: nameDisplay, done: nameDone } = useTypewriter('NOAH HOLMES', 90, 600);
+  const { display: nameDisplay, done: nameDone } = useTypewriter('RAYYAN AUDITORE', 90, 600);
   const [roleIdx, setRoleIdx] = useState(0);
   const [roleDisplay, setRoleDisplay] = useState('');
 

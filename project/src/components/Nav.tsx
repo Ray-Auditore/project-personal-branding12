@@ -46,7 +46,7 @@ export default function Nav() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-2 py-3">
           <button onClick={() => go('home')} className="flex items-center gap-2 group">
             <Search className="w-6 h-6 group-hover:rotate-12 transition-transform" strokeWidth={2.5} />
-            <span className="font-typewriter text-lg tracking-widest uppercase">N. Holmes</span>
+            <span className="font-typewriter text-lg tracking-widest uppercase">Rayyan G.A</span>
             <span className="hidden sm:inline font-terminal text-sm opacity-60">// P.I.</span>
           </button>
 
