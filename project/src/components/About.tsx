@@ -12,10 +12,10 @@ const SKILLS = [
 ];
 
 const FACTS = [
-  { icon: Briefcase, label: 'Years on the Beat', value: '7+' },
-  { icon: Coffee, label: 'Cases Closed', value: '142' },
+  { icon: Briefcase, label: 'Years on the Beat', value: '3+' },
+  { icon: Coffee, label: 'Cases Closed', value: '42+' },
   { icon: Skull, label: 'Bugs Eliminated', value: '2,840' },
-  { icon: Award, label: 'Commendations', value: '11' },
+ 
 ];
 
 export default function About() {
