@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 font-typewriter uppercase tracking-widest">
           <Fingerprint className="w-5 h-5" />
-          N. Holmes — P.I.
+          R. Auditore — P.I.
         </div>
         <p className="font-terminal text-sm opacity-60 text-center">
           Case files sealed {new Date().getFullYear()}. No bugs were harmed in the making of this site.
